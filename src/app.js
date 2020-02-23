@@ -5,6 +5,7 @@ var geocode = require('../utils/geocode')
 var forecast = require('../utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const viewPath = path.join(__dirname, '../templates/views');
 const partialPath = path.join(__dirname, '../templates/partials')
@@ -55,6 +56,6 @@ app.get('/about',(req,res)=>{
         "text":"I have created this app for my initial learing of nodeJs.Please Try to use this app and FeedBacks are welcomed"
     })
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("server is up and running")
 })
